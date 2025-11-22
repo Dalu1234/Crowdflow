@@ -1,0 +1,7 @@
+[package]
+name = "omni.project.crowdflow"
+version = "1.0.0"
+title = "CrowdFlow Simulation"
+
+[[python.module]]
+name = "omni.project.crowdflow"

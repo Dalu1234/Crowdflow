@@ -1,0 +1,10 @@
+[package]
+name = "omni.project.crowdflow"
+version = "1.0.0"
+title = "CrowdFlow Simulation"
+
+[extensions]
+[[extensions.extension]]
+id = "omni.project.crowdflow"
+title = "CrowdFlow Simulation"
+python_module = "omni.project.crowdflow"

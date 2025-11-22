@@ -1,0 +1,10 @@
+[package]
+name = "company.my_python_ui"
+version = "0.1.0"
+title = "Company Python UI Example"
+
+[extensions]
+[[extensions.extension]]
+id = "company.my_python_ui"
+title = "Company Python UI Example"
+python_module = "omni.company.my_python_ui"

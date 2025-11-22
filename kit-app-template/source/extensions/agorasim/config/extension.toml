@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+#
+# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+# property and proprietary rights in and to this material, related
+# documentation and any modifications thereto. Any use, reproduction,
+# disclosure or distribution of this material and related documentation
+# without an express license agreement from NVIDIA CORPORATION or
+# its affiliates is strictly prohibited.
+
+[package]
+title = "agorasim"
+version = "0.1.0"  # Semantic Versioning is used: https://semver.org/
+description = "The simplest python UI extension example. Use it as a starting point for your extensions."
+category = "Example"  # How to categorize this in the Extension Manager
+changelog = "docs/CHANGELOG.md"
+icon = "data/icon.png"  # Icon to show in the Extension Manager
+keywords = ["kit", "example", "extension", "python", "ui"]  # Search keywords for the Extension Manager
+preview_image = "data/preview.png"  # Preview to show in the Extension Manager
+readme  = "docs/README.md"  # Path (relative to the root) or content of readme markdown file for UI
+repository = "https://github.com/NVIDIA-Omniverse/kit-app-template"  # URL of the extension source repository
+
+
+[dependencies]
+# The `omni.kit.uiapp` dependency is useful when running inside a full Kit
+# application that provides the UI app extension. For local development with
+# this template/example we comment it out to avoid the dependency solver
+# failing when registries are not available.
+# To re-enable for publishing, restore the line below:
+# "omni.kit.uiapp" = {}
+
+# --- ADD THESE LINES FOR PHYSICS ---
+"omni.physx.bundle" = {}
+"omni.physx.ui" = {}
+"omni.physx.cct" = {}
+
+
+[settings]
+
+
+[[python.module]]  # Main python module this extension provides, it will be publicly available as "import agorasim"
+name = "agorasim"
+
+
+[documentation]
+pages = [
+    "docs/Overview.md",
+    "docs/CHANGELOG.md",
+]
+
+
+[[test]]
+dependencies = [
+    "omni.kit.test",
+    "omni.kit.ui_test"  # UI testing extension
+]
+
+args = [
+]
